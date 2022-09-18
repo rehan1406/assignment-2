@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR-->
+    <header>    
+        <ul>
+            <li><a href="#">Home</li></a>
+            <li><a href="#">Product</li></a>
+            <li><a href="#">Gallery</li></a>
+            <li><a href="#">Blog</li></a>
+            <li><a href="#">Inventory</li></a>
+        </ul>
+</header>
+
+    <div class="konten">
+      <!-- profile -->
+      <div class="profil">
+
+        <!-- Bagian Kiri -->
+        <div class="kiri">
+          <img src="user.jpeg" />
+          <div class="grup">
+            <div class="grup-nama">
+              <p id="nama">Rechan Prihandika Esa Putra</p>
+              <p id="kerja-1">Front End Designer</p>
+            </div>
+            <div class="button">
+              <button class="button-kiri">Edit</button>
+              <button class="button-kanan">Resume</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bagian Kanan -->
+        <div class="kanan">
+          <div class="kanan-atas">
+            <p>Availability</p>
+            <p>Usia</p>
+            <p>Lokasi</p>
+            <p>Pengalaman</p>
+            <p>Email</p>
+          </div>
+          <div>
+            <p id="masa-1">Full Time</p>
+            <p id="usia">20</p>
+            <p id="lokasi">Serang</p>
+            <p id="pengalaman">2</p>
+            <p id="email">rehanprihandika@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <!--label-->
+      <form onsubmit="submitForm()">
+        <div class="isi">
+        <form class="data">
+        <label class="nama-10">Nama</label><br>
+        <input type="text" id="hola" name="nama" value=""><br>
+        <label class="nama-10">Role</label><br>
+        <input type="text" id="role" name="role" value=""><br>
+        <label class="nama-10">Availability</label><br>
+        <input type="text" id="masa" name="masa-1"value=""><br>
+        <label class="nama-10">Usia</label><br>
+        <input type="text" id="usia-1" name="usia" value=""><br>
+        <label class="nama-10">Lokasi</label><br>
+        <input type="text" id="lokasi-1" name="lokasi" value=""><br>
+        <label class="nama-10">Years Experience</label><br>
+        <input type="text" id="Years" name="Experience" value=""><br>
+        <label class="nama-10">Email</label><br>
+        <input type="text" id="email-1" name="Email" value=""><br>
+      </div>
+            <br>
+        <input type="submit" class="submit" value="SUBMIT" />
+    </div>
+    </form>
+
+
+    <!-- SCRIPT JS -->
+
+    <script>
+      function submitForm() {
+        event.preventDefault();
+
+        const nama = document.getElementById("hola").value;
+        document.getElementById("nama").innerText = nama;
+
+        const kerja = document.getElementById("role").value;
+        document.getElementById("kerja-1").innerText = kerja;
+
+        const posisi = document.getElementById("masa").value;
+        document.getElementById("masa-1").innerText = posisi;
+
+        const usia = document.getElementById("usia-1").value;
+        document.getElementById("usia").innerText = usia;
+
+        const lokasi = document.getElementById("lokasi-1").value;
+        document.getElementById("lokasi").innerText = lokasi;
+
+        const tahun = document.getElementById("Years").value;
+        document.getElementById("pengalaman").innerText = tahun;
+
+        const email = document.getElementById("email-1").value;
+        document.getElementById("email").innerText = email;
+      }
+    </script>
+  </body>
+</html>
